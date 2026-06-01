@@ -1,0 +1,267 @@
+/* ==========================================
+   Apex Fraction-Al - Core Stylesheet
+   ========================================== */
+
+:root {
+    --primary-navy: #0A3C73;       /* Deep corporate blue from logo text */
+    --accent-teal: #00A88F;        /* Vibrant teal from logo mark */
+    --accent-blue: #0093CB;        /* Bright blue arrow tone */
+    --neutral-dark: #1F2937;       /* Main text colour */
+    --neutral-light: #F9FAFB;      /* Background light gray */
+    --white: #FFFFFF;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--neutral-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    margin-right: 12px;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+}
+
+.logo-text span {
+    color: var(--accent-teal);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--neutral-dark);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--accent-teal);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, #051E3A 100%);
+    color: var(--white);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-teal);
+    color: var(--white);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #008773;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-navy);
+}
+
+/* --- Main Layout Sections --- */
+section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary-navy);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-teal);
+    margin: 15px auto 0 auto;
+}
+
+/* --- Grid Elements & Cards --- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--neutral-light);
+    padding: 30px;
+    border-radius: 6px;
+    border-top: 4px solid var(--accent-blue);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.card h3 {
+    color: var(--primary-navy);
+    margin-bottom: 15px;
+}
+
+/* --- Timeline / Experience --- */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    padding: 30px;
+    background-color: var(--neutral-light);
+    border-radius: 6px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--primary-navy);
+}
+
+.timeline-meta {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: var(--accent-blue);
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.timeline-item h3 {
+    color: var(--primary-navy);
+    margin-bottom: 10px;
+}
+
+.timeline-item ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* --- Contact & Info Blocks --- */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+@media(max-width: 768px) {
+    .contact-wrapper { grid-template-columns: 1fr; }
+    .nav-container { flex-direction: column; }
+    nav ul { margin-top: 15px; }
+    .hero h1 { font-size: 2.2rem; }
+}
+
+.info-block {
+    margin-bottom: 25px;
+}
+
+.info-block h4 {
+    color: var(--primary-navy);
+    font-size: 1.1rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #111827;
+    color: #9CA3AF;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--accent-teal);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-top: 15px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+}

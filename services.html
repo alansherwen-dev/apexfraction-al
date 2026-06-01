@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Apex Fraction-Al</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Contextual additions for the services grid display */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .service-card {
+            background: var(--neutral-light);
+            padding: 40px;
+            border-radius: 6px;
+            border-top: 4px solid var(--accent-teal);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .service-card h3 {
+            color: var(--primary-navy);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .service-card ul {
+            margin-left: 20px;
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: var(--neutral-dark);
+        }
+        .service-card ul li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 6px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .highlight-box h3 {
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="assets/Apex.png" alt="Apex Fraction-Al Logo" class="logo-img">
+                <div class="logo-text">Apex <span>Fraction-Al</span></div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="about.html">About & Track Record</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 class="section-title">Fractional Expertise</h2>
+        <p style="text-align: center; max-width: 800px; margin: -20px auto 40px auto; font-size: 1.2rem; color: #555;">
+            Targeted C-level capability tailored to your business challenges. Deploy enterprise-grade solutions exactly when and where they are needed.
+        </p>
+
+        <div class="services-grid">
+
+            <!-- Service 1 -->
+            <div class="service-card">
+                <h3>IT Leadership</h3>
+                <p>Interim and fractional C-level advisory to steer technical functions, stabilize operations, and manage high-stakes IT portfolios without the overhead of a full-time executive placement[cite: 1].</p>
+                <ul>
+                    <li>Direct oversight of cross-functional and international IT teams[cite: 1].</li>
+                    <li>Budget management, portfolio prioritization, and Capex/Opex optimization[cite: 1].</li>
+                    <li>Crisis management, vendor remediation, and contract negotiation[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card" style="border-top-color: var(--accent-blue);">
+                <h3>IT Strategy Development</h3>
+                <p>Architecting comprehensive, forward-looking IT roadmaps explicitly aligned with overarching corporate business goals, growth vectors, or imminent market exits[cite: 1].</p>
+                <ul>
+                    <li>M&A technology strategies for seamless post-acquisition ecosystem integration[cite: 1].</li>
+                    <li>Robust IT governance frameworks tailored to secure successful corporate IPOs[cite: 1].</li>
+                    <li>Cybersecurity strategies utilizing industry-standard frameworks (NIST, GDPR, PCI DSS)[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <h3>Business Transformation</h3>
+                <p>Overhauling legacy organizational dependencies, modernizing tools, and driving cultural change to achieve significant cost efficiencies and operational excellence[cite: 1].</p>
+                <ul>
+                    <li>Decoupling from restrictive third-party outsourcers to successfully insource core IT capability[cite: 1].</li>
+                    <li>Vendor consolidation campaigns to yield massive licensing and operational cost reductions[cite: 1].</li>
+                    <li>Transitioning legacy communications into modern, omnichannel customer interaction solutions[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card" style="border-top-color: var(--accent-blue);">
+                <h3>Programme Management</h3>
+                <p>Disciplined, framework-driven oversight for critical infrastructure rollouts and massive cross-border enterprise system deployments[cite: 1].</p>
+                <ul>
+                    <li>Structured execution using Prince2, Agile, and ITIL delivery methodologies[cite: 1].</li>
+                    <li>Global rollouts of cloud ecosystems (AWS, Azure) and enterprise platforms (Salesforce, SAP)[cite: 1].</li>
+                    <li>Complex network modernizations, including legacy MPLS migrations to agile SD-WAN networks[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="service-card">
+                <h3>AI Implementation</h3>
+                <p>Pragmatic injection of artificial intelligence workflows and automated systems into operational environments to yield immediate efficiency returns[cite: 1].</p>
+                <ul>
+                    <li>Embedding AI into commercial management frameworks to expedite validation and discovery[cite: 1].</li>
+                    <li>Deploying intelligent workflows within construction, quality, and administrative environments[cite: 1].</li>
+                    <li>Automating reporting chains using SharePoint, PowerApps, and automated Business Intelligence flows[cite: 1].</li>
+                </ul>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="service-card" style="border-top-color: var(--accent-blue);">
+                <h3>Operating Model Implementation</h3>
+                <p>Designing, configuring, and executing Target Operating Models (TOM) that fundamentally optimize how service and support functions interface with users[cite: 1].</p>
+                <ul>
+                    <li>Structuring service desks under rigid ITIL frameworks (Incident, Problem, Change, CSI)[cite: 1].</li>
+                    <li>Configuration and go-live deployment of enterprise ITSM tooling (ServiceNow, Cherwell)[cite: 1].</li>
+                    <li>Establishing event-based reporting metrics and continuous service improvement dashboards[cite: 1].</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Call to Action Block -->
+        <div class="highlight-box">
+            <h3>Need Scoped, High-Impact Delivery?</h3>
+            <p style="margin-bottom: 25px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Whether your organization requires immediate governance maturity or long-term structural transformation, engagement structures are flexible and driven entirely by objectives.
+            </p>
+            <a href="contact.html" class="btn" style="background-color: var(--white); color: var(--primary-navy);">Discuss An Engagement</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Apex Fraction-Al. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a> | 
+            <a href="services.html">Services</a> |
+            <a href="about.html">Track Record</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+</body>
+</html>
