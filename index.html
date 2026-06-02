@@ -7,8 +7,120 @@
   <meta name="description" content="Senior fractional IT leadership and digital transformation consultancy. 25+ years of C-level IT expertise, on demand." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="assets/apex-logo.png" />
+  <style>
+  /* ── Cookie Banner ── */
+  #cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #1a2e5a;
+    border-top: 3px solid #00b4c8;
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.22);
+    font-family: inherit;
+    transform: translateY(100%);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  #cookie-banner.visible {
+    transform: translateY(0);
+  }
+
+  #cookie-banner p {
+    margin: 0;
+    color: #cce8f0;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    flex: 1;
+    min-width: 220px;
+  }
+
+  #cookie-banner p a {
+    color: #00b4c8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  #cookie-banner p a:hover {
+    color: #4dd0c4;
+  }
+
+  .cookie-actions {
+    display: flex;
+    gap: 0.65rem;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  .cookie-btn {
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background 0.18s, color 0.18s, border-color 0.18s;
+    white-space: nowrap;
+    font-family: inherit;
+  }
+
+  .cookie-btn-accept {
+    background: #00b4c8;
+    color: #fff;
+    border-color: #00b4c8;
+  }
+
+  .cookie-btn-accept:hover {
+    background: #0097ab;
+    border-color: #0097ab;
+  }
+
+  .cookie-btn-decline {
+    background: transparent;
+    color: #cce8f0;
+    border-color: rgba(204, 232, 240, 0.35);
+  }
+
+  .cookie-btn-decline:hover {
+    border-color: #cce8f0;
+    color: #fff;
+  }
+
+  @media (max-width: 540px) {
+    #cookie-banner {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 1.2rem 1.2rem;
+    }
+    .cookie-actions {
+      width: 100%;
+    }
+    .cookie-btn {
+      flex: 1;
+      text-align: center;
+    }
+  }
+</style>
 </head>
 <body>
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <p>
+    We use cookies to ensure this website works correctly and to understand how visitors
+    use it. No personal data is shared with third parties.
+    <a href="https://www.apexfraction-al.com/privacy.html">Read our Privacy Policy</a>.
+  </p>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-btn-decline" id="cookie-decline" aria-label="Decline cookies">Decline</button>
+    <button class="cookie-btn cookie-btn-accept" id="cookie-accept" aria-label="Accept cookies">Accept cookies</button>
+  </div>
+</div>
 
   <!-- ── Navigation ── -->
   <nav class="nav" id="nav">
@@ -307,5 +419,29 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   </script>
-</body>
+<script>
+  (function() {
+    var banner = document.getElementById('cookie-banner');
+    var choice = localStorage.getItem('cookieConsent');
+
+    // Only show if no choice has been made yet
+    if (!choice) {
+      // Small delay so the page loads before the banner slides in
+      setTimeout(function() {
+        banner.classList.add('visible');
+      }, 600);
+    }
+
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      banner.classList.remove('visible');
+    });
+
+    document.getElementById('cookie-decline').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'declined');
+      banner.classList.remove('visible');
+    });
+  })();
+</script>
+  </body>
 </html>
