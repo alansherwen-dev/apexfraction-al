@@ -1,174 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Apex Fraction-Al</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Contextual additions for the services grid display */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .service-card {
-            background: var(--neutral-light);
-            padding: 40px;
-            border-radius: 6px;
-            border-top: 4px solid var(--accent-teal);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-        .service-card h3 {
-            color: var(--primary-navy);
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        .service-card ul {
-            margin-left: 20px;
-            margin-top: 15px;
-            font-size: 0.95rem;
-            color: var(--neutral-dark);
-        }
-        .service-card ul li {
-            margin-bottom: 8px;
-        }
-        .highlight-box {
-            background-color: var(--primary-navy);
-            color: var(--white);
-            padding: 40px;
-            border-radius: 6px;
-            margin-top: 60px;
-            text-align: center;
-        }
-        .highlight-box h3 {
-            color: var(--white);
-            margin-bottom: 15px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Apex Fraction-AI</title>
+  <meta name="description" content="Fractional IT services including IT Director, digital transformation, AI workflows, cyber security, and vendor optimisation." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/apex-logo.png" />
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo-area">
-                <img src="assets/Apex.png" alt="Apex Fraction-Al Logo" class="logo-img">
-                <div class="logo-text">Apex <span>Fraction-Al</span></div>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="about.html">About & Track Record</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/apex-logo.png" alt="Apex Fraction-AI Logo" />
+        <div class="nav-logo-text">
+          <span class="apex">APEX</span>
+          <span class="fraction">Fraction-AI</span>
         </div>
-    </header>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <div class="nav-burger" id="navBurger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
 
-    <section class="container">
-        <h2 class="section-title">Fractional Expertise</h2>
-        <p style="text-align: center; max-width: 800px; margin: -20px auto 40px auto; font-size: 1.2rem; color: #555;">
-            Targeted C-level capability tailored to your business challenges. Deploy enterprise-grade solutions exactly when and where they are needed.
-        </p>
+  <div class="page-hero">
+    <span class="label">What We Offer</span>
+    <h1>Our Services</h1>
+    <p>Flexible engagement models built around your organisation's needs — from a few days per month to full interim leadership.</p>
+  </div>
 
-        <div class="services-grid">
-
-            <!-- Service 1 -->
-            <div class="service-card">
-                <h3>IT Leadership</h3>
-                <p>Interim and fractional C-level advisory to steer technical functions, stabilize operations, and manage high-stakes IT portfolios without the overhead of a full-time executive placement[cite: 1].</p>
-                <ul>
-                    <li>Direct oversight of cross-functional and international IT teams[cite: 1].</li>
-                    <li>Budget management, portfolio prioritization, and Capex/Opex optimization[cite: 1].</li>
-                    <li>Crisis management, vendor remediation, and contract negotiation[cite: 1].</li>
-                </ul>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="service-card" style="border-top-color: var(--accent-blue);">
-                <h3>IT Strategy Development</h3>
-                <p>Architecting comprehensive, forward-looking IT roadmaps explicitly aligned with overarching corporate business goals, growth vectors, or imminent market exits[cite: 1].</p>
-                <ul>
-                    <li>M&A technology strategies for seamless post-acquisition ecosystem integration[cite: 1].</li>
-                    <li>Robust IT governance frameworks tailored to secure successful corporate IPOs[cite: 1].</li>
-                    <li>Cybersecurity strategies utilizing industry-standard frameworks (NIST, GDPR, PCI DSS)[cite: 1].</li>
-                </ul>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="service-card">
-                <h3>Business Transformation</h3>
-                <p>Overhauling legacy organizational dependencies, modernizing tools, and driving cultural change to achieve significant cost efficiencies and operational excellence[cite: 1].</p>
-                <ul>
-                    <li>Decoupling from restrictive third-party outsourcers to successfully insource core IT capability[cite: 1].</li>
-                    <li>Vendor consolidation campaigns to yield massive licensing and operational cost reductions[cite: 1].</li>
-                    <li>Transitioning legacy communications into modern, omnichannel customer interaction solutions[cite: 1].</li>
-                </ul>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="service-card" style="border-top-color: var(--accent-blue);">
-                <h3>Programme Management</h3>
-                <p>Disciplined, framework-driven oversight for critical infrastructure rollouts and massive cross-border enterprise system deployments[cite: 1].</p>
-                <ul>
-                    <li>Structured execution using Prince2, Agile, and ITIL delivery methodologies[cite: 1].</li>
-                    <li>Global rollouts of cloud ecosystems (AWS, Azure) and enterprise platforms (Salesforce, SAP)[cite: 1].</li>
-                    <li>Complex network modernizations, including legacy MPLS migrations to agile SD-WAN networks[cite: 1].</li>
-                </ul>
-            </div>
-
-            <!-- Service 5 -->
-            <div class="service-card">
-                <h3>AI Implementation</h3>
-                <p>Pragmatic injection of artificial intelligence workflows and automated systems into operational environments to yield immediate efficiency returns[cite: 1].</p>
-                <ul>
-                    <li>Embedding AI into commercial management frameworks to expedite validation and discovery[cite: 1].</li>
-                    <li>Deploying intelligent workflows within construction, quality, and administrative environments[cite: 1].</li>
-                    <li>Automating reporting chains using SharePoint, PowerApps, and automated Business Intelligence flows[cite: 1].</li>
-                </ul>
-            </div>
-
-            <!-- Service 6 -->
-            <div class="service-card" style="border-top-color: var(--accent-blue);">
-                <h3>Operating Model Implementation</h3>
-                <p>Designing, configuring, and executing Target Operating Models (TOM) that fundamentally optimize how service and support functions interface with users[cite: 1].</p>
-                <ul>
-                    <li>Structuring service desks under rigid ITIL frameworks (Incident, Problem, Change, CSI)[cite: 1].</li>
-                    <li>Configuration and go-live deployment of enterprise ITSM tooling (ServiceNow, Cherwell)[cite: 1].</li>
-                    <li>Establishing event-based reporting metrics and continuous service improvement dashboards[cite: 1].</li>
-                </ul>
-            </div>
-
+  <!-- Fractional IT Director -->
+  <section id="fractional" style="background:var(--white); padding:var(--section-pad);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="fade-up">
+          <span class="label">Core Service</span>
+          <h2 style="margin:16px 0 20px;">Fractional IT Director</h2>
+          <p class="lead">C-level IT leadership on a part-time or retained basis. Attend board meetings, lead IT strategy, manage teams and vendors — with full senior accountability, minus the full-time overhead.</p>
+          <p style="margin-top:16px;opacity:0.75;font-size:0.93rem;">Ideal for growing organisations that need genuine IT leadership to steer digital strategy, manage risk, and build capability — but aren't yet at the scale to justify a permanent IT Director salary.</p>
+          <div class="expertise-list" style="margin-top:28px;gap:10px;display:flex;flex-direction:column;">
+            <div class="expertise-item">IT development and board reporting</div>
+            <div class="expertise-item">Team leadership and supplier management</div>
+            <div class="expertise-item">IT governance, risk and compliance</div>
+            <div class="expertise-item">Budget ownership and financial oversight</div>
+            <div class="expertise-item">Service delivery management and ITIL implementation</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:32px;">Enquire About This Service</a>
         </div>
-
-        <!-- Call to Action Block -->
-        <div class="highlight-box">
-            <h3>Need Scoped, High-Impact Delivery?</h3>
-            <p style="margin-bottom: 25px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Whether your organization requires immediate governance maturity or long-term structural transformation, engagement structures are flexible and driven entirely by objectives.
-            </p>
-            <a href="contact.html" class="btn" style="background-color: var(--white); color: var(--primary-navy);">Discuss An Engagement</a>
+        <div class="fade-up">
+          <div class="about-card-main">
+            <span class="label">Engagement Models</span>
+            <h3>Flexible by Design</h3>
+            <p>Engagements are structured to fit your business — not a fixed template.</p>
+            <div class="expertise-list">
+              <div class="expertise-item">1–5 days per week retained model</div>
+              <div class="expertise-item">Project-based fixed-term engagement</div>
+              <div class="expertise-item">Interim cover during recruitment</div>
+              <div class="expertise-item">Advisory / non-exec board support</div>
+              <div class="expertise-item">Remote-first or on-site arrangements</div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2026 Apex Fraction-Al. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="index.html">Home</a> | 
-            <a href="services.html">Services</a> |
-            <a href="about.html">Track Record</a> | 
-            <a href="privacy.html">Privacy Policy</a>
+  <!-- Divider -->
+  <div style="height:1px;background:var(--light-grey);margin:0 24px;"></div>
+
+  <!-- Digital Transformation -->
+  <section id="transformation" style="background:var(--off-white); padding:var(--section-pad);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">Programme Leadership</span>
+        <h2>Digital Transformation</h2>
+        <p>Structured, end-to-end leadership of complex technology change — from strategy through execution to business-as-usual handover.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3>Platform Modernisation</h3>
+          <p>Replace legacy infrastructure and migrate to modern cloud platforms. Full lifecycle ownership from scoping and procurement to go-live and adoption.</p>
+          <div class="service-tags"><span class="tag">Cloud</span><span class="tag">Microsoft 365</span><span class="tag">Azure</span></div>
         </div>
-    </footer>
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+          </div>
+          <h3>ITSM Implementation</h3>
+          <p>Full ITIL framework design and deployment — incident, problem, change, and CSI processes — supported by the right tooling for your scale.</p>
+          <div class="service-tags"><span class="tag">ServiceNow</span><span class="tag">Cherwell</span><span class="tag">ITIL</span></div>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <h3>Communications & Collaboration</h3>
+          <p>Unify communications across your organisation — replacing fragmented telephony with integrated omnichannel platforms.</p>
+          <div class="service-tags"><span class="tag">Teams</span><span class="tag">RingCentral</span><span class="tag">SD-WAN</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- AI & Automation -->
+  <section id="ai" style="background:var(--white); padding:var(--section-pad);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="fade-up">
+          <span class="label">Emerging Technology</span>
+          <h2 style="margin:16px 0 20px;">AI &amp; Automation</h2>
+          <p class="lead">Practical AI integration that moves beyond experimentation into production-grade workflows that save time, reduce error, and generate measurable value.</p>
+          <p style="margin-top:16px;opacity:0.75;font-size:0.93rem;">With direct experience implementing AI solutions on major international projects, Apex Fraction-AI brings a pragmatic, risk-aware approach to AI adoption — focused on outcomes your organisation can actually sustain.</p>
+          <div class="expertise-list" style="margin-top:28px;gap:10px;display:flex;flex-direction:column;">
+            <div class="expertise-item">AI workflow design and implementation</div>
+            <div class="expertise-item">Microsoft Power Platform (Power Automate, Power BI)</div>
+            <div class="expertise-item">Business intelligence and dashboard automation</div>
+            <div class="expertise-item">Process automation in commercial and quality teams</div>
+            <div class="expertise-item">Agentic AI solution architecture</div>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:32px;">Discuss Your AI Needs</a>
+        </div>
+        <div class="fade-up">
+          <div class="about-card-main">
+            <span class="label">Proven on the Ground</span>
+            <h3>AI That Works in Practice</h3>
+            <p>Recognised with awards for innovation in HSEW automation on a major international infrastructure project. Agentic AI workflows deployed across commercial, quality, and operations functions.</p>
+            <div class="expertise-list">
+              <div class="expertise-item">3 project innovation awards for AI-enabled automation</div>
+              <div class="expertise-item">Deployed on global mega-projects and enterprise environments</div>
+              <div class="expertise-item">Focus on sustainable, governed AI adoption</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cyber Security -->
+  <section id="cyber" style="background:var(--off-white); padding:var(--section-pad);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="label">Risk &amp; Compliance</span>
+        <h2>Cyber Security</h2>
+        <p>Structured uplift of your security posture — from assessment and framework adoption through to policy, tooling, and culture change.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3>NIST Framework Adoption</h3>
+          <p>Full implementation of the NIST Cybersecurity Framework — from current-state assessment and gap analysis through to a measurable, governed security programme.</p>
+          <div class="service-tags"><span class="tag">NIST</span><span class="tag">Risk Assessment</span><span class="tag">Policy</span></div>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3>Compliance &amp; Data Governance</h3>
+          <p>GDPR and PCI-DSS compliance programmes, data governance policy development, and breach response planning aligned to regulatory requirements.</p>
+          <div class="service-tags"><span class="tag">GDPR</span><span class="tag">PCI-DSS</span><span class="tag">Data Governance</span></div>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <h3>Security Posture Improvement</h3>
+          <p>Rapid, measurable improvement of your Microsoft Secure Score and broader security maturity. Proven track record: 10% to 90% in nine months in a regulated environment.</p>
+          <div class="service-tags"><span class="tag">Microsoft Security</span><span class="tag">Secure Score</span><span class="tag">Maturity</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="cta-band">
+    <div class="container">
+      <span class="label">Let's Talk</span>
+      <h2>Not Sure Which Service Fits?</h2>
+      <p>Book a no-obligation discovery call and we'll identify the right engagement model for your organisation.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">Book a Discovery Call</a>
+        <a href="about.html" class="btn btn-outline">About Apex Fraction-AI</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/apex-logo.png" alt="Apex Fraction-AI" />
+            <div class="footer-logo-text">
+              <span class="apex">APEX</span>
+              <span class="fraction">Fraction-AI</span>
+            </div>
+          </div>
+          <p>Senior fractional IT leadership and digital transformation expertise.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="services.html#fractional">Fractional IT Director</a></li>
+            <li><a href="services.html#transformation">Digital Transformation</a></li>
+            <li><a href="services.html#ai">AI &amp; Automation</a></li>
+            <li><a href="services.html#cyber">Cyber Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul><li><a href="privacy.html">Privacy Policy</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Apex Fraction-AI. All rights reserved. Registered in England &amp; Wales.</p>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+    document.getElementById('navBurger').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+    const observer = new IntersectionObserver(e => e.forEach(i => { if (i.isIntersecting) i.target.classList.add('visible'); }), { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
